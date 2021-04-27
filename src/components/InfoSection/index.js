@@ -28,20 +28,30 @@ const InfoSection = ({id,
     img,
     alt,
     dark,
+    dark2,
     primary,
     darkText }) => {
     return (
         <>
         <InfoContainer lightBg={lightBg} id={id}>
             <InfoWrapper>
-                <InfoRow imgSrart={imgStart}>
+                <InfoRow imgStart={imgStart}>
                     <Column1>
                         <TextWrapper>
                             <TopLine>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
                             <BtnWrap>
-                                <Button to='home'>{buttonLabel}</Button>
+                                <Button to='home'
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true"
+                                offset={-80}
+                                primary={primary ? 'true' : 'false'}
+                                dark={dark ? 'true' : 'false'}
+                                dark2={dark2 ? 'true' : 'false'}
+                                >{buttonLabel}</Button>
                             </BtnWrap>
                         </TextWrapper>
                     </Column1>
